@@ -1,1 +1,755 @@
-<h1>hello</h1>
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+
+		<!-- src's -->
+		<title>ICONIC JEWELRY</title>
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no"
+		/>
+
+		<!-- Bootstrap CSS -->
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+			integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
+			crossorigin="anonymous"
+		/>
+
+		<link
+			rel="stylesheet"
+			href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+		/>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+		<link rel="stylesheet" media="all" href="styles.css" />
+		<!-- FontAwesome -->
+		<link
+			href="https://fonts.googleapis.com/icon?family=Material+Icons"
+			rel="stylesheet"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+		/>
+
+		<!-- Popper -->
+		<script
+			src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+			integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+			crossorigin="anonymous"
+		></script>
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js"
+			integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT"
+			crossorigin="anonymous"
+		></script>
+	</head>
+
+	<body
+		id="body"
+		style="background-color: #fef9f8; font-family: Lato, sans-serif"
+	>
+		<!-- header -->
+		<header id="header" class="pt-3 pr-5 pl-5 md-6">
+			<div class="container">
+				<a href="index.html" title="ICONIC JEWELRY"
+					><img
+						class=""
+						width="75"
+						height="75"
+						src="https://firebasestorage.googleapis.com/v0/b/iconic-jewelry-3ae03.appspot.com/o/mainLogo%2Flogo.png?alt=media&token=bcd91283-8c08-4e38-90a3-ca6d11fdc8f1"
+						id="logo"
+				/></a>
+				<div class="right-links mt-5 float-right">
+					<a href="cart.html"
+						><i
+							class="material-icons nav-icons mr-5"
+							style="color: black"
+							>shopping_cart</i
+						></a
+					>
+					<a href="wishlist.html"
+						><i
+							class="material-icons nav-icons mr-5"
+							style="color: black"
+							>favorite</i
+						></a
+					>
+					<a href="sign_in.html"
+						><i
+							class="material-icons nav-icons mr-5"
+							style="color: black"
+							>person</i
+						></a
+					>
+				</div>
+			</div>
+		</header>
+
+		<div class="container">
+			<hr />
+			<div class="topbar mt-3 mr-5 ml-5">
+				<ul
+					class="topbar-list justify-content-center pl-4 d-flex"
+					style="list-style: none"
+				>
+					<li>
+						<a class="topbar-links pr-5" href="index.html">Home</a>
+					</li>
+					<li>
+						<a class="topbar-links pr-5" href="about.html">About</a>
+					</li>
+					<li>
+						<a
+							class="topbar-links dropdown dropdown-toggle pr-5"
+							data-bs-toggle="dropdown"
+							style="cursor: pointer"
+							>Products</a
+						>
+						<ul class="dropdown-menu">
+							<div class="dropright">
+								<a
+									class="dropdown-item dropdown-toggle"
+									style="cursor: pointer"
+									data-toggle="dropdown"
+									>Necklaces</a
+								>
+								<div class="dropdown-menu">
+									<a
+										href="necklaceD.html"
+										class="dropdown-item"
+										>Diamond</a
+									>
+									<a
+										href="necklaceS.html"
+										class="dropdown-item"
+										>Silver</a
+									>
+									<a
+										href="necklaceG.html"
+										class="dropdown-item"
+										>Gold</a
+									>
+								</div>
+							</div>
+							<div class="dropright">
+								<a
+									class="dropdown-item dropdown-toggle"
+									style="cursor: pointer"
+									data-toggle="dropdown"
+									>Earrings</a
+								>
+								<div class="dropdown-menu">
+									<a
+										href="earringD.html"
+										class="dropdown-item"
+										>Diamond</a
+									>
+									<a
+										href="earringS.html"
+										class="dropdown-item"
+										>Silver</a
+									>
+									<a
+										href="earringG.html"
+										class="dropdown-item"
+										>Gold</a
+									>
+								</div>
+							</div>
+							<div class="dropright">
+								<a
+									class="dropdown-item dropdown-toggle"
+									style="cursor: pointer"
+									data-toggle="dropdown"
+									>Rings</a
+								>
+								<div class="dropdown-menu">
+									<a href="ringD.html" class="dropdown-item"
+										>Diamond</a
+									>
+									<a href="ringS.html" class="dropdown-item"
+										>Silver</a
+									>
+									<a href="ringG.html" class="dropdown-item"
+										>Gold</a
+									>
+								</div>
+							</div>
+							<div class="dropright">
+								<a
+									class="dropdown-item dropdown-toggle"
+									style="cursor: pointer"
+									data-toggle="dropdown"
+									>Bracelets</a
+								>
+								<div class="dropdown-menu">
+									<a
+										href="braceletD.html"
+										class="dropdown-item"
+										>Diamond</a
+									>
+									<a
+										href="braceletS.html"
+										class="dropdown-item"
+										>Silver</a
+									>
+									<a
+										href="braceletG.html"
+										class="dropdown-item"
+										>Gold</a
+									>
+								</div>
+							</div>
+							<li>
+								<a class="dropdown-item" href="giftSet.html"
+									>Gift Set</a
+								>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="topbar-links pr-5" href="customize.html"
+							>Customize</a
+						>
+					</li>
+					<li>
+						<a class="topbar-links pr-5" href="contact.html"
+							>Contact Us</a
+						>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+		<script>
+			var n, i;
+
+			function carouselImage() {
+				firebase
+					.database()
+					.ref("data")
+					.on("value", function (snapshot) {
+						for (i = 1; i < snapshot.val().length; i++) {
+							var newDiv = document.createElement("DIV");
+							newDiv.classList.add(
+								"col",
+								"s-12",
+								"m-12",
+								"l-12",
+								"bg-dark",
+								"text-white",
+								"p-3",
+								"m-2"
+							);
+
+							var newP = document.createElement("P");
+							var t = document.createTextNode(
+								String(snapshot.child(i + "/name").val())
+							);
+
+							newP.appendChild(t);
+
+							newDiv.appendChild(newP);
+
+							document.getElementById("main").appendChild(newDiv);
+						}
+					});
+			}
+		</script>
+
+		<!-- Bootstrap Carousel -->
+		<div id="demo" class="carousel slide" data-ride="carousel">
+			<div class="carousel-inner pr-3 pl-3">
+				<div class="carousel-item active">
+					<img
+						src="https://firebasestorage.googleapis.com/v0/b/iconic-jewelry-3ae03.appspot.com/o/carousel%2Fc1.jpg?alt=media&token=a6a1200a-c511-4fbf-a5fb-42dc28df1f41"
+						alt="Necklaces"
+						width="100%"
+						height="300"
+					/>
+					<div class="carousel-caption"></div>
+				</div>
+				<div class="carousel-item">
+					<img
+						src="images/c2.jpg"
+						alt="Earings"
+						width="100%"
+						height="300"
+					/>
+					<div class="carousel-caption"></div>
+				</div>
+				<div class="carousel-item">
+					<img
+						src="images/c3.jpg"
+						alt="Rings"
+						width="100%"
+						height="300"
+					/>
+					<div class="carousel-caption"></div>
+				</div>
+			</div>
+			<a class="carousel-control-prev" href="#" data-slide="prev">
+				<span class="carousel-control-prev-icon"></span>
+			</a>
+			<a class="carousel-control-next" href="#" data-slide="next">
+				<span class="carousel-control-next-icon"></span>
+			</a>
+		</div>
+
+		<!-- main inner body -->
+		<div class="container text-center mt-3">
+			<h4>COLLECTION</h4>
+		</div>
+		<div class="card-group px-5 py-4">
+			<div class="card">
+				<a href="necklaceD.html"
+					><img
+						src="images/necklaceInner.jpg"
+						class="card-img-top"
+						alt="..."
+				/></a>
+				<div class="card-body">
+					<a href="necklaceD.html"
+						><h5 class="card-title text-dark">Shop Necklaces</h5></a
+					>
+				</div>
+			</div>
+			<div class="card">
+				<a href="earringD.html"
+					><img
+						src="images/earInner.jpg"
+						class="card-img-top"
+						alt="..."
+				/></a>
+				<div class="card-body">
+					<a href="earringD.html"
+						><h5 class="card-title text-dark">Shop Earrings</h5></a
+					>
+				</div>
+			</div>
+			<div class="card">
+				<a href="ringD.html"
+					><img
+						src="images/ringInner.jpg"
+						class="card-img-top"
+						alt="..."
+				/></a>
+				<div class="card-body">
+					<a href="ringD.html"
+						><h5 class="card-title text-dark">Shop Rings</h5></a
+					>
+				</div>
+			</div>
+
+			<div class="card">
+				<a href="braceletD.html"
+					><img
+						src="images/braceletInner.jpg"
+						class="card-img-top"
+						alt="..."
+				/></a>
+				<div class="card-body">
+					<a href="braceletD.html"
+						><h5 class="card-title text-dark">Shop Bracelets</h5></a
+					>
+				</div>
+			</div>
+			<div class="card">
+				<a href="giftSet.html"
+					><img
+						src="images/gfInner.jpg"
+						class="card-img-top"
+						alt="..."
+				/></a>
+				<div class="card-body">
+					<a href="giftSet.html"
+						><h5 class="card-title text-dark">Shop Gift Set</h5></a
+					>
+				</div>
+			</div>
+		</div>
+
+		<!-- Customize -->
+
+		<div class="row ml-5 mt-3 mr-5" style="background-color: #ef9273">
+			<div class="col-md-6 mt-4">
+				<h2>Make your own Jewelry</h2>
+				<p class="">
+					This feature will blow your mind as you will be able to make
+					your custom design Necklaces, Rings, Bracelets and lot more!
+				</p>
+
+				<div class="group-btn">
+					<a href="customize.html" class="btn btn-effect">
+						Customize <i class="fa fa-arrow-right"></i
+					></a>
+				</div>
+			</div>
+			<div class="col-md-3">
+				<img
+					src="images/customize.jpg"
+					style="width: 300px; height: 300px"
+					alt=""
+					class="img-fluid mx-auto"
+					data-holder-rendered="true"
+				/>
+			</div>
+			<div class="col-md-3">
+				<img
+					src="images/customize1.jpg"
+					style="width: 300px; height: 300px"
+					alt=""
+					class="img-fluid mx-auto"
+					data-holder-rendered="true"
+				/>
+			</div>
+		</div>
+
+		<!-- Testimonial -->
+		<div class="container mt-3 col-md-12 col-12">
+			<div class="header text-muted pt-3 pb-3 text-center">
+				What people are saying about Iconic Jewelry
+			</div>
+			<div class="row pb-3" style="justify-content: center">
+				<div class="card col-md-3 col-11">
+					<div class="card-content">
+						<div class="card-body p-0">
+							<div class="profile mb-4 mt-3 text-center">
+								<img src="images/testimonial/t1.jpg" />
+							</div>
+							<div class="card-subtitle">
+								<p>
+									<small class="text-muted">
+										<i class="fa fa-quote-left"></i> Your
+										customer service is fantastic and your
+										jewellery is beautiful. I always get
+										comments and asked where I bought it.
+										<i
+											class="
+												fa
+												fa-quote-left
+												fa-flip-horizontal
+											"
+										></i>
+									</small>
+								</p>
+							</div>
+							<div class="card-body company text-center">
+								<small class="intro text-muted"
+									>Sam Diago</small
+								>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="card col-md-3 col-11 second">
+					<div class="card-content">
+						<div class="card-body p-0">
+							<div class="profile mb-4 mt-3 text-center">
+								<img src="images/testimonial/t2.jpg" />
+							</div>
+							<div class="card-subtitle">
+								<p>
+									<small class="text-muted">
+										<i class="fa fa-quote-left"></i> Iconic
+										Jewelry never ceases to amaze me - I
+										love their originality and
+										thoughtfulness. Their website is often
+										my first port of call if I want
+										something special for myself.
+										<i
+											class="
+												fa
+												fa-quote-left
+												fa-flip-horizontal
+											"
+										></i>
+									</small>
+								</p>
+							</div>
+							<div class="card-body company text-center">
+								<small class="intro text-muted"
+									>Monty Jones</small
+								>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="card col-md-3 col-11 third">
+					<div class="card-content">
+						<div class="card-body p-0">
+							<div class="profile mb-4 mt-3 text-center">
+								<img src="images/testimonial/t3.jpg" />
+							</div>
+							<div class="card-subtitle">
+								<p>
+									<small class="text-muted">
+										<i class="fa fa-quote-left"></i> The
+										pieces are exactly as they appear on the
+										website, contemporary with a nod to
+										classic design and the quality is of a
+										high standard ... Love it!
+										<i
+											class="
+												fa
+												fa-quote-left
+												fa-flip-horizontal
+											"
+										></i>
+									</small>
+								</p>
+							</div>
+							<div class="card-body company text-center">
+								<small class="intro text-muted">John Tim</small>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Footer -->
+		<footer class="page-footer font-small pt-4 ml-3 mr-3">
+			<!-- Footer Links -->
+			<div class="container text-center text-md-left">
+				<!-- Footer links -->
+				<div class="row justify-content-center text-md-left mt-2 pb-2">
+					<!-- Grid column -->
+					<div class="col-md-2 col-lg-2 col-xl-2 mx-3 mt-3">
+						<h6 class="text-uppercase mb-4 font-weight-bold">
+							All Products
+						</h6>
+						<p>
+							<a class="text-dark" href="necklaceD.html"
+								>Necklaces</a
+							>
+						</p>
+						<p>
+							<a class="text-dark" href="earringD.html"
+								>Earrings</a
+							>
+						</p>
+						<p>
+							<a class="text-dark" href="ringD.html">Rings</a>
+						</p>
+						<p>
+							<a class="text-dark" href="braceletD.html"
+								>Bracelets</a
+							>
+						</p>
+						<p>
+							<a class="text-dark" href="#!">Customize</a>
+						</p>
+						<p>
+							<a class="text-dark" href="giftSet.html"
+								>Gift Set</a
+							>
+						</p>
+					</div>
+
+					<hr class="w-100 clearfix d-md-none" />
+
+					<div class="col-md-2 col-lg-2 col-xl-2 mx-3 mt-3">
+						<h6 class="text-uppercase mb-4 font-weight-bold">
+							Customer Care
+						</h6>
+						<p>
+							<a class="text-dark" href="contact.html"
+								>Customer Care</a
+							>
+						</p>
+						<p>
+							<a class="text-dark" href="return.html">Returns</a>
+						</p>
+						<p>
+							<a class="text-dark" href="termsOfUse.html"
+								>Terms of Use</a
+							>
+						</p>
+						<p>
+							<a class="text-dark" href="policy.html"
+								>Privacy Policy</a
+							>
+						</p>
+					</div>
+
+					<hr class="w-100 clearfix d-md-none" />
+
+					<div class="col-md-2 col-lg-2 col-xl-2 mx-3 mt-3">
+						<h6 class="text-uppercase mb-4 font-weight-bold">
+							Useful Links
+						</h6>
+						<p>
+							<a class="text-dark" href="myaccount.html"
+								>Your Account</a
+							>
+						</p>
+						<p>
+							<a class="text-dark" href="blog.html">Blog</a>
+						</p>
+						<p>
+							<a class="text-dark" href="faq.html">FAQ</a>
+						</p>
+					</div>
+
+					<hr class="w-100 clearfix d-md-none" />
+
+					<div class="col-md-2 col-lg-2 col-xl-2 mx-3 mt-3">
+						<h6 class="text-uppercase mb-4 font-weight-bold">
+							Contact
+						</h6>
+
+						<div style="display: flex">
+							<i class="material-icons mr-3">home</i>
+							<p>
+								<a class="text-dark" href="#!"
+									>New Westminster, BC Canada</a
+								>
+							</p>
+						</div>
+
+						<div style="display: flex">
+							<i class="material-icons mr-3">email</i>
+							<p>
+								<a class="text-dark" href="#!">
+									appliedresearch2021@gmail.com
+								</a>
+							</p>
+						</div>
+
+						<div style="display: flex">
+							<i class="material-icons mr-3">call</i>
+							<p>
+								<a class="text-dark" href="#!">
+									+ 01 234 567 89
+								</a>
+							</p>
+						</div>
+
+						<h6 class="text-uppercase font-weight-bold">
+							Follow Us
+						</h6>
+
+						<div class="">
+							<ul class="list-unstyled list-inline">
+								<li class="list-inline-item">
+									<a
+										href="https://www.facebook.com/"
+										class="btn-floating btn-sm facebook"
+									>
+										<i
+											class="
+												fa fa-facebook
+												icon-facebook
+												fa-2x
+												mt-3
+											"
+											style="color: blue"
+										></i>
+									</a>
+								</li>
+								<li class="list-inline-item">
+									<a
+										href="https://www.whatsapp.com/?lang=en"
+										class="btn-floating btn-sm whatsapp"
+									>
+										<i
+											class="
+												fa fa-whatsapp
+												icon-whatsapp
+												fa-2x
+											"
+											style="color: green"
+										></i>
+									</a>
+								</li>
+								<li class="list-inline-item">
+									<a
+										href="https://www.snapchat.com/"
+										class="btn-floating btn-sm snapchat"
+									>
+										<i
+											class="
+												fa fa-snapchat
+												icon-snapchat
+												fa-2x
+											"
+											style="color: yellow"
+										></i>
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+
+					<script>
+						$(".facebook").on("mouseenter", function () {
+							$(".icon-facebook").addClass("fa-spin");
+							$(this).addClass("change-color");
+						});
+						$(".facebook").on("mouseleave", function () {
+							$(".icon-facebook").removeClass(
+								"animate-cog fa-spin"
+							);
+							$(this).removeClass("change-color");
+						});
+
+						$(".whatsapp").on("mouseenter", function () {
+							$(".icon-whatsapp").addClass("fa-spin");
+							$(this).addClass("change-color");
+						});
+						$(".whatsapp").on("mouseleave", function () {
+							$(".icon-whatsapp").removeClass(
+								"animate-cog fa-spin"
+							);
+							$(this).removeClass("change-color");
+						});
+
+						$(".snapchat").on("mouseenter", function () {
+							$(".icon-snapchat").addClass("fa-spin");
+							$(this).addClass("change-color");
+						});
+						$(".snapchat").on("mouseleave", function () {
+							$(".icon-snapchat").removeClass(
+								"animate-cog fa-spin"
+							);
+							$(this).removeClass("change-color");
+						});
+
+						$(".pinterest").on("mouseenter", function () {
+							$(".icon-pinterest").addClass("fa-spin");
+							$(this).addClass("change-color");
+						});
+						$(".pinterest").on("mouseleave", function () {
+							$(".icon-pinterest").removeClass(
+								"animate-cog fa-spin"
+							);
+							$(this).removeClass("change-color");
+						});
+					</script>
+				</div>
+
+				<hr />
+
+				<div class="row d-flex justify-content-center">
+					<div class="col-md-8 col-lg-4">
+						<p class="text-md-left">
+							© 2021 Copyright:
+							<a href="https://mdbootstrap.com/">
+								<strong class="text-dark">
+									ICONICJEWELRY.com</strong
+								>
+							</a>
+						</p>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</body>
+</html>

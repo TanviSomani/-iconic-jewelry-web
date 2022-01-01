@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+
+    <!-- src's -->
+    <link rel="stylesheet" media="all" href="styles.css">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/6.2.4/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.2.4/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/3.1.0/firebase-database.js"></script>
+
+    <script src="https://cdn.firebase.com/libs/firebaseui/4.0.0/firebaseui.js"></script>
+
+    <script>
+        // Web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyB0_CiN-u8R6kx36P5WA_bJgHU2uC5e8gA",
+            authDomain: "iconic-jewelry-3ae03.firebaseapp.com",
+            databaseURL: "https://iconic-jewelry-3ae03-default-rtdb.firebaseio.com",
+            projectId: "iconic-jewelry-3ae03",
+            storageBucket: "iconic-jewelry-3ae03.appspot.com",
+            messagingSenderId: "349296521109",
+            appId: "1:349296521109:web:ac91a6f43a84e40cbdd09c"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+    </script>
+
+    <script>
+        function userSignUp() {
+
+            var mainRef = firebase.database().ref().child("user");
+
+            var userfname = document.getElementById("fname");
+            var userlname = document.getElementById("lname");
+            var useremail = document.getElementById("email");
+            var userpass = document.getElementById("pass");
+            var useraptNo = document.getElementById("aptNo");
+            var userbuildingNo = document.getElementById("buildingNo");
+            var userstreetName = document.getElementById("streetName");
+            var usercity = document.getElementById("city");
+            var userprovince = document.getElementById("province");
+            var userpostalCode = document.getElementById("postalCode");
+
+            firebase.auth().createUserWithEmailAndPassword(useremail.value, userpass.value)
+                .then((response) => {
+
+                    mainRef.child(firebase.auth().currentUser.uid).set({
+                        email: useremail.value,
+                        firstName: userfname.value,
+                        lastName: userlname.value,
+                        cart: "empty",
+                        aptNo: useraptNo.value,
+                        buildingNo: userbuildingNo.value,
+                        streetName: userstreetName.value,
+                        city: usercity.value,
+                        province: userprovince.value,
+                        postalCode: userpostalCode.value,
+                    });
+                    console.log("user created");
+
+                    window.location.href = "index.html";
+                })
+                .catch(function (error) {
+                    var errorCode = error.code;
+                    var errorMessage = error.message;
+                })
+        }
+    </script>
+</head>
+
+<body id="sign-up-body" style="font-family: Lato, sans-serif;">
+    <div class="container">
+        <div class="container align-items-center">
+            <div class="sign-up-form" id="signUp-form">
+                <h2 class="title">Sign Up</h2>
+                <p class="mt-3">Create your account. It's free and only takes a minute.</p>
+                <div class="input-field">
+                    <label for="fname"></label>
+                    <input autocomplete="off" type="text" placeholder="Enter your first name" id="fname">
+                </div>
+                <div class="input-field">
+                    <label for="lname"></label>
+                    <input type="text" placeholder="Enter your last name" id="lname">
+                </div>
+                <div class="input-field">
+                    <label for="email"></label>
+                    <input type="email" placeholder="Enter your email" id="email">
+                </div>
+                <div class="input-field">
+                    <label for="pass"></label>
+                    <input type="password" placeholder="Enter your password" id="pass">
+                </div>
+                <div class="input-field">
+                    <label for="aptNo"></label>
+                    <input type="text" id="aptNo" placeholder="Enter Apartment number" />
+                </div>
+                <div class="form-group input-field">
+                    <label for="buildingNo"></label>
+                    <input type="text" id="buildingNo" placeholder="Enter building number" />
+                </div>
+                <div class="form-group input-field">
+                    <label for="streetName"></label>
+                    <input type="text" id="streetName" placeholder="Enter street name" />
+                </div>
+
+                <div class="form-group input-field">
+                    <label for="city"></label>
+                    <input type="text" id="city" placeholder="Enter city" />
+                </div>
+                <div class="form-group input-field">
+                    <label for="province"></label>
+                    <select id="province" class="form-control">
+                        <option selected>Choose...</option>
+                        <option>BC</option>
+                        <option>AB</option>
+                        <option>NS</option>
+                        <option>ON</option>
+                    </select>
+                </div>
+                <div class="form-group input-field">
+                    <label for="postalCode"></label>
+                    <input type="text" id="postalCode" placeholder="Enter postal code" />
+                </div>
+
+
+                <p class="terms"><input id="checkid2" type="checkbox" value="test"> I accept the <b><u><a class="in"
+                                href="termsOfUse.html">Terms of Use </a></u></b> and <b><u><a class="in"
+                                href="policy.html">Privacy Policy</a></u></b>.
+                </p>
+
+                <a class="btn sign-up" onclick="userSignUp()">Sign Up</a>
+
+                <div id="tableUsers">
+
+                </div>
+
+                <footer>
+                    <p class="terms">Already have an account? <b><u><a class="in" href="sign_in.html">Sign
+                                    in</a></u></b>.</p>
+                </footer>
+            </div>
+        </div>
+</body>
+
+</html>

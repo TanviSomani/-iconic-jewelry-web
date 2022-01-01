@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+
+		<!-- src's -->
+		<title>ICONIC JEWELRY</title>
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no"
+		/>
+
+		<!-- Bootstrap CSS -->
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+			integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
+			crossorigin="anonymous"
+		/>
+
+		<link
+			rel="stylesheet"
+			href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+		/>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+		<link rel="stylesheet" media="all" href="styles.css" />
+		<!-- FontAwesome -->
+		<link
+			href="https://fonts.googleapis.com/icon?family=Material+Icons"
+			rel="stylesheet"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+		/>
+
+		<!-- Popper -->
+		<script
+			src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+			integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+			crossorigin="anonymous"
+		></script>
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js"
+			integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT"
+			crossorigin="anonymous"
+		></script>
+
+		<!-- The core Firebase JS SDK -->
+		<script src="https://www.gstatic.com/firebasejs/6.2.4/firebase-app.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/6.2.4/firebase-auth.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/6.2.4/firebase-database.js"></script>
+		<!-- firebaseUI -->
+		<script src="https://cdn.firebase.com/libs/firebaseui/4.0.0/firebaseui.js"></script>
+
+		<script>
+			var firebaseConfig = {
+				apiKey: "AIzaSyB0_CiN-u8R6kx36P5WA_bJgHU2uC5e8gA",
+				authDomain: "iconic-jewelry-3ae03.firebaseapp.com",
+				databaseURL:
+					"https://iconic-jewelry-3ae03-default-rtdb.firebaseio.com",
+				projectId: "iconic-jewelry-3ae03",
+				storageBucket: "iconic-jewelry-3ae03.appspot.com",
+				messagingSenderId: "349296521109",
+				appId: "1:349296521109:web:ac91a6f43a84e40cbdd09c",
+			};
+			// Initialize Firebase
+			firebase.initializeApp(firebaseConfig);
+
+			var firstSelectedProduct;
+
+			function allowDrop(ev) {
+				ev.preventDefault();
+			}
+
+			function drag(ev) {
+				ev.dataTransfer.setData("text", ev.target.id);
+			}
+			function drop(ev) {
+				ev.preventDefault();
+				document.getElementById("blah").src = "";
+				var data = ev.dataTransfer.getData("text");
+				document.getElementById("blah").src =
+					document.getElementById(data).src;
+
+				firstSelectedProduct = document.getElementById("blah").src;
+			}
+
+			function check_value(radio) {
+				switch (radio) {
+					case "option1":
+						document.getElementById("drag1").src =
+							"https://firebasestorage.googleapis.com/v0/b/iconic-jewelry-3ae03.appspot.com/o/plainImages%2Fnecklace1.png?alt=media&token=1e2f85b3-05fd-4aaf-a148-2857734afa0f";
+						document.getElementById("drag2").src =
+							"https://firebasestorage.googleapis.com/v0/b/iconic-jewelry-3ae03.appspot.com/o/plainImages%2Fnecklace2.png?alt=media&token=91681508-831d-4dae-bb2e-a1c388f670ef";
+						document.getElementById("drag3").src =
+							"https://firebasestorage.googleapis.com/v0/b/iconic-jewelry-3ae03.appspot.com/o/plainImages%2Fnecklace3.png?alt=media&token=30e16e1b-b29c-4ae7-b170-cc097e35994d";
+						document.getElementById("drag4").src =
+							"https://firebasestorage.googleapis.com/v0/b/iconic-jewelry-3ae03.appspot.com/o/plainImages%2Fnecklace4.png?alt=media&token=bacdefb1-6507-4dc0-aa4c-ab725830d853";
+						document.getElementById("drag5").src =
+							"https://firebasestorage.googleapis.com/v0/b/iconic-jewelry-3ae03.appspot.com/o/plainImages%2Fnecklace5.png?alt=media&token=34cb7d11-68c1-47b2-ab4e-c15b7b615927";
+						document.getElementById("drag6").src =
+							"https://firebasestorage.googleapis.com/v0/b/iconic-jewelry-3ae03.appspot.com/o/plainImages%2Fnecklace6.png?alt=media&token=8e8d1ed8-f7a8-43c8-ad83-abf2f84ca35e";
+						break;
+					case "option2":
+						document.getElementById("drag1").src =
+							"https://firebasestorage.googleapis.com/v0/b/iconic-jewelry-3ae03.appspot.com/o/plainImages%2Fearrings1.png?alt=media&token=b6f42f20-9597-4c3c-9b27-f34857373333";
+						document.getElementById("drag2").src =
+							"https://firebasestorage.googleapis.com/v0/b/iconic-jewelry-3ae03.appspot.com/o/plainImages%2Fearrings2.png?alt=media&token=942c5e42-6098-429e-84f8-53e4ab95a9d4";
+						document.getElementById("drag3").src =
+							"https://firebasestorage.googleapis.com/v0/b/iconic-jewelry-3ae03.appspot.com/o/plainImages%2Fearrings3.png?alt=media&token=99b914ee-ec01-492c-a771-d947d88bcb9d";
+						document.getElementById("drag4").src =
+							"https://firebasestorage.googleapis.com/v0/b/iconic-jewelry-3ae03.appspot.com/o/plainImages%2Fearrings4.png?alt=media&token=e427068a-156f-4f3b-b11a-dd7be3983a3f";
+						document.getElementById("drag5").src =
+							"https://firebasestorage.googleapis.com/v0/b/iconic-jewelry-3ae03.appspot.com/o/plainImages%2Fearrings5.png?alt=media&token=6dd4e67b-79a8-4f40-9a84-367b903d624a";
+						document.getElementById("drag6").src =
+							"https://firebasestorage.googleapis.com/v0/b/iconic-jewelry-3ae03.appspot.com/o/plainImages%2Fearrings6.png?alt=media&token=53132fbd-b1f5-4b81-aff8-1995c68864bb";
+						break;
+					case "option3":
+						document.getElementById("drag1").src =
+							"https://firebasestorage.googleapis.com/v0/b/iconic-jewelry-3ae03.appspot.com/o/plainImages%2Fring1.png?alt=media&token=d65ce09a-1199-420d-9a77-4d582348f08a";
+						document.getElementById("drag2").src =
+							"https://firebasestorage.googleapis.com/v0/b/iconic-jewelry-3ae03.appspot.com/o/plainImages%2Fring2.png?alt=media&token=e98a2aff-ee71-43f8-a4be-14ba991f20d2";
+						document.getElementById("drag3").src =
+							"https://firebasestorage.googleapis.com/v0/b/iconic-jewelry-3ae03.appspot.com/o/plainImages%2Fring3.png?alt=media&token=187546d7-8262-44c7-9b56-cea10d204e0d";
+						document.getElementById("drag4").src =
+							"https://firebasestorage.googleapis.com/v0/b/iconic-jewelry-3ae03.appspot.com/o/plainImages%2Fring4.png?alt=media&token=c80bf13c-4dc2-44cb-9320-335d77de4b04";
+						document.getElementById("drag5").src =
+							"https://firebasestorage.googleapis.com/v0/b/iconic-jewelry-3ae03.appspot.com/o/plainImages%2Fring5.png?alt=media&token=7a19500b-662a-47c5-864b-77d7eae6b020";
+						document.getElementById("drag6").src =
+							"https://firebasestorage.googleapis.com/v0/b/iconic-jewelry-3ae03.appspot.com/o/plainImages%2Fring6.png?alt=media&token=a4a44eb2-994b-409a-9a73-e1b2fb3caac3";
+						break;
+					case "option4":
+						document.getElementById("drag1").src =
+							"https://firebasestorage.googleapis.com/v0/b/iconic-jewelry-3ae03.appspot.com/o/plainImages%2Fbracelet1.png?alt=media&token=a8df6c74-cd70-4655-996f-dc009bb2931a";
+						document.getElementById("drag2").src =
+							"https://firebasestorage.googleapis.com/v0/b/iconic-jewelry-3ae03.appspot.com/o/plainImages%2Fbracelet2.png?alt=media&token=7c598435-e9cb-4e3b-bd39-43cb0d188e9c";
+						document.getElementById("drag3").src =
+							"https://firebasestorage.googleapis.com/v0/b/iconic-jewelry-3ae03.appspot.com/o/plainImages%2Fbracelet3.png?alt=media&token=86462549-4f22-48fc-b345-5299ff34e4b8";
+						document.getElementById("drag4").src =
+							"https://firebasestorage.googleapis.com/v0/b/iconic-jewelry-3ae03.appspot.com/o/plainImages%2Fbracelet4.png?alt=media&token=6220d257-8844-4fef-b2ef-0488ab961c89";
+						document.getElementById("drag5").src =
+							"https://firebasestorage.googleapis.com/v0/b/iconic-jewelry-3ae03.appspot.com/o/plainImages%2Fbracelet5.png?alt=media&token=100838dd-f807-409f-9d30-96c5293ec9fc";
+						document.getElementById("drag6").src =
+							"https://firebasestorage.googleapis.com/v0/b/iconic-jewelry-3ae03.appspot.com/o/plainImages%2Fbracelet6.png?alt=media&token=b3577ee7-a3c6-43e4-bccc-2d9a7cbb89f6";
+						break;
+				}
+			}
+
+			function baseProducts(x, y) {
+				document.getElementById("baseProductsDiv").innerHTML = "";
+
+				var baseElements = ["gold", "silver", "roseGold"];
+
+				var rowDiv = document.createElement("DIV");
+				rowDiv.classList.add("row");
+
+				for (i = x; i <= y; i++) {
+					var mainDiv = document.createElement("DIV");
+					mainDiv.classList.add("col-4");
+
+					var mainImage = document.createElement("IMG");
+					mainImage.setAttribute("id", baseElements[i - 1]);
+					mainImage.src = "images/baseProduct/bp" + i + ".png";
+					mainImage.style.width = "40px";
+					mainImage.style.height = "40px";
+					mainImage.style.margin = "10px";
+					mainImage.style.borderRadius = "50%";
+					mainImage.addEventListener("click", function (e) {
+						mainSource = document.getElementById("blah").src;
+
+						switch (e.target.id) {
+							case "gold":
+								document.getElementById("blah").src =
+									firstSelectedProduct;
+
+								currentSourceImage =
+									document.getElementById("blah").src;
+
+								baseProd = "images/baseProduct/bp1.png";
+
+								document.getElementById("blah").src = baseProd;
+
+								$("#blah").css(
+									"-webkit-mask-box-image",
+									"url(" + currentSourceImage + ")"
+								);
+
+								break;
+							case "silver":
+								document.getElementById("blah").src =
+									firstSelectedProduct;
+
+								currentSourceImage =
+									document.getElementById("blah").src;
+
+								baseProd = "images/baseProduct/bp2.png";
+
+								document.getElementById("blah").src = baseProd;
+
+								$("#blah").css(
+									"-webkit-mask-box-image",
+									"url(" + currentSourceImage + ")"
+								);
+								break;
+							case "roseGold":
+								document.getElementById("blah").src =
+									firstSelectedProduct;
+
+								currentSourceImage =
+									document.getElementById("blah").src;
+
+								baseProd = "images/baseProduct/bp3.png";
+								document.getElementById("blah").src = baseProd;
+
+								$("#blah").css(
+									"-webkit-mask-box-image",
+									"url(" + currentSourceImage + ")"
+								);
+
+								break;
+						}
+					});
+
+					mainDiv.appendChild(mainImage);
+
+					rowDiv.appendChild(mainDiv);
+
+					document
+						.getElementById("baseProductsDiv")
+						.appendChild(rowDiv);
+				}
+
+				var resetButtonIcon = document.createElement("SPAN");
+				resetButtonIcon.innerHTML = "refresh";
+				resetButtonIcon.classList.add(
+					"material-icons",
+					"mt-5",
+					"my-icon",
+					"text-center"
+				);
+				resetButtonIcon.style.color = "#ef9273";
+				resetButtonIcon.style.fontSize = "40px";
+				resetButtonIcon.style.cursor = "pointer";
+
+				resetButtonIcon.addEventListener("click", function (event) {
+					window.location.reload();
+				});
+
+				rowDiv.appendChild(resetButtonIcon);
+			}
+
+			function pushImages() {
+				const user = firebase.auth().currentUser;
+
+				var refString = "user/customizedProducts";
+
+				var mainRef = firebase.database().ref(refString);
+
+				mainRef.on("value", function (snapshot) {
+					if (user) {
+						var webkitUploadRef = firebase
+							.database()
+							.ref()
+							.child("user/" + user.uid + "/customizedProducts");
+
+						var maskKey = webkitUploadRef.push();
+
+						maskKey.set({
+							currentSourceImage: currentSourceImage,
+							baseProd: baseProd,
+							productName: "Customized Product",
+							productPrice: "$399.00",
+						});
+
+						window.alert("Item added to cart.");
+					} else {
+						window.alert("Please sign In first.");
+					}
+				});
+			}
+
+			function readURL(input) {
+				if (input.files && input.files[0]) {
+					console.log(input);
+					var reader = new FileReader();
+					var source;
+
+					reader.onload = function (e) {
+						source = $("#blah").attr("src", e.target.result);
+
+						console.log(source.src);
+					};
+					reader.readAsDataURL(input.files[0]);
+				}
+			}
+
+			function userUpload() {
+				const user = firebase.auth().currentUser;
+
+				var uImage = document.getElementById("blah");
+
+				var refString = "user/userUpload";
+
+				var mainRef = firebase.database().ref(refString);
+
+				mainRef.on("value", function (snapshot) {
+					if (user) {
+						var webkitUploadRef = firebase
+							.database()
+							.ref()
+							.child("user/" + user.uid + "/userUpload");
+
+						var maskKey = webkitUploadRef.push();
+
+						readURL(this);
+						maskKey.set({
+							uImage: uImage.src,
+							productName: "Customized User Product",
+							productPrice: "$499.00",
+						});
+
+						window.alert("Item added to cart.");
+					} else {
+						window.alert("Please sign In first.");
+					}
+				});
+			}
+		</script>
+	</head>
+
+	<body
+		onload="check_value('option1'); baseProducts(1, 3);"
+		style="background-color: #fef9f8; font-family: Lato, sans-serif"
+	>
+		<header id="header" class="pt-3 pr-5 pl-5 md-6">
+			<div class="container">
+				<a href="index.html" title="ICONIC JEWELRY"
+					><img
+						class=""
+						width="75"
+						height="75"
+						src="https://firebasestorage.googleapis.com/v0/b/iconic-jewelry-3ae03.appspot.com/o/mainLogo%2Flogo.png?alt=media&token=bcd91283-8c08-4e38-90a3-ca6d11fdc8f1"
+						id="logo"
+				/></a>
+				<div class="right-links mt-5 float-right">
+					<a href="cart.html"
+						><i
+							class="material-icons nav-icons mr-5"
+							style="color: black"
+							>shopping_cart</i
+						></a
+					>
+					<a href="wishlist.html"
+						><i
+							class="material-icons nav-icons mr-5"
+							style="color: black"
+							>favorite</i
+						></a
+					>
+					<a href="sign_in.html"
+						><i
+							class="material-icons nav-icons mr-5"
+							style="color: black"
+							>person</i
+						></a
+					>
+				</div>
+			</div>
+		</header>
+
+		<div class="container">
+			<hr />
+			<nav aria-label="breadcrumb">
+				<ol class="breadcrumb">
+					<li class="breadcrumb-item">
+						<a
+							class="text-dark text-decoration-none"
+							href="index.html"
+							>Home</a
+						>
+					</li>
+					<li class="breadcrumb-item active" aria-current="page">
+						Customize
+					</li>
+				</ol>
+			</nav>
+		</div>
+
+		<div class="container">
+			<div class="text-center">
+				<div class="form-check form-check-inline">
+					<input
+						class="form-check-input"
+						type="radio"
+						name="inlineRadioOptions"
+						id="inlineRadio1"
+						value="option1"
+						onclick="check_value(this.value)"
+						checked
+					/>
+					<label class="form-check-label" for="inlineRadio1"
+						>Neckalces</label
+					>
+				</div>
+				<div class="form-check form-check-inline">
+					<input
+						class="form-check-input"
+						type="radio"
+						name="inlineRadioOptions"
+						id="inlineRadio2"
+						value="option2"
+						onclick="check_value(this.value)"
+					/>
+					<label class="form-check-label" for="inlineRadio2"
+						>Earrings</label
+					>
+				</div>
+				<div class="form-check form-check-inline">
+					<input
+						class="form-check-input"
+						type="radio"
+						name="inlineRadioOptions"
+						id="inlineRadio3"
+						value="option3"
+						onclick="check_value(this.value)"
+					/>
+					<label class="form-check-label" for="inlineRadio3"
+						>Rings</label
+					>
+				</div>
+				<div class="form-check form-check-inline">
+					<input
+						class="form-check-input"
+						type="radio"
+						name="inlineRadioOptions"
+						id="inlineRadio4"
+						value="option4"
+						onclick="check_value(this.value)"
+					/>
+					<label class="form-check-label" for="inlineRadio4"
+						>Bracelets</label
+					>
+				</div>
+			</div>
+
+			<div class="row pt-4">
+				<div
+					class="col-2 d-flex justify-content-center"
+					style="
+						overflow-y: scroll;
+						overflow-x: hidden;
+						height: 700px;
+					"
+				>
+					<div class="">
+						<h3 class="text-center">Type</h3>
+						<div
+							id="div1"
+							class="d-flex m-2 p-2"
+							style="
+								width: 150px;
+								height: 150px;
+								border: 1px solid black;
+							"
+							ondrop="drop(event)"
+							ondragover="allowDrop(event)"
+						>
+							<img
+								draggable="true"
+								ondragstart="drag(event)"
+								id="drag1"
+								width="130"
+								height="130"
+							/>
+						</div>
+
+						<div
+							id="div2"
+							class="d-flex m-2 p-2"
+							style="
+								width: 150px;
+								height: 150px;
+								border: 1px solid black;
+							"
+							ondrop="drop(event)"
+							ondragover="allowDrop(event)"
+						>
+							<img
+								draggable="true"
+								ondragstart="drag(event)"
+								id="drag2"
+								width="130"
+								height="130"
+							/>
+						</div>
+
+						<div
+							id="div3"
+							class="d-flex m-2 p-2"
+							style="
+								width: 150px;
+								height: 150px;
+								border: 1px solid black;
+							"
+							ondrop="drop(event)"
+							ondragover="allowDrop(event)"
+						>
+							<img
+								draggable="true"
+								ondragstart="drag(event)"
+								id="drag3"
+								width="130"
+								height="130"
+							/>
+						</div>
+
+						<div
+							id="div4"
+							class="d-flex m-2 p-2"
+							style="
+								width: 150px;
+								height: 150px;
+								border: 1px solid black;
+							"
+							ondrop="drop(event)"
+							ondragover="allowDrop(event)"
+						>
+							<img
+								draggable="true"
+								ondragstart="drag(event)"
+								id="drag4"
+								width="130"
+								height="130"
+							/>
+						</div>
+
+						<div
+							id="div5"
+							class="d-flex m-2 p-2"
+							style="
+								width: 150px;
+								height: 150px;
+								border: 1px solid black;
+							"
+							ondrop="drop(event)"
+							ondragover="allowDrop(event)"
+						>
+							<img
+								draggable="true"
+								ondragstart="drag(event)"
+								id="drag5"
+								width="130"
+								height="130"
+							/>
+						</div>
+
+						<div
+							id="div6"
+							class="d-flex m-2 p-2"
+							style="
+								width: 150px;
+								height: 150px;
+								border: 1px solid black;
+							"
+							ondrop="drop(event)"
+							ondragover="allowDrop(event)"
+						>
+							<img
+								draggable="true"
+								ondragstart="drag(event)"
+								id="drag6"
+								width="130"
+								height="130"
+							/>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-7">
+					<h3 class="text-center">Image Preview</h3>
+					<div class="m-2 p-2" style="border: 1px solid black">
+						<div
+							class=""
+							ondrop="drop(event)"
+							ondragover="allowDrop(event)"
+						>
+							<img
+								id="blah"
+								src="http://placehold.it/180"
+								alt="your image"
+								class="image d-flex"
+								style="
+									margin-inline: auto;
+									width: 280px;
+									height: 300px;
+								"
+							/>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-3" style="height: 700px">
+					<h3 class="text-center">Base Product</h3>
+					<div
+						id="baseProductsDiv"
+						style="
+							border: 1px solid black;
+							width: 250px;
+							height: 170px;
+						"
+					></div>
+
+					<h3 class="text-center mt-4">File Upload</h3>
+					<div
+						class="m-2 p-2"
+						style="border: 1px solid black; width: 240px"
+					>
+						<div>
+							<input type="file" onchange="readURL(this);" />
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="container text-center">
+				<button
+					type="button"
+					class="btn mt-5 linkBtn"
+					id="addButton"
+					style="background-color: #ef9273"
+				>
+					<a onclick="pushImages();" class="text-dark">
+						Add to Cart
+					</a>
+				</button>
+
+				<button
+					type="button"
+					class="btn mt-5 linkBtn"
+					id="addButton"
+					style="background-color: #ef9273"
+				>
+					<a onclick="userUpload();" class="text-dark">
+						Add Customized Product to Cart
+					</a>
+				</button>
+			</div>
+		</div>
+
+		<footer class="page-footer font-small ml-3 mr-3">
+			<div class="container text-center text-md-left">
+				<hr />
+
+				<div class="row d-flex justify-content-center">
+					<div class="col-md-8 col-lg-4">
+						<p class="text-md-left">
+							© 2021 Copyright:
+							<a href="https://mdbootstrap.com/">
+								<strong class="text-dark">
+									ICONICJEWELRY.com</strong
+								>
+							</a>
+						</p>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</body>
+</html>
